@@ -9,8 +9,6 @@ public class CreateEmployeeCard extends CreateCardTemplate{
 
     @Override
     public void generatorIdCard() {
-
-
         System.out.println("2. Generate Driver License ID: " + random);
     }
 

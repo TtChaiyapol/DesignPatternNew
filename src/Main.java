@@ -1,3 +1,5 @@
+import CreateCard.CreateEmployeeCardOld;
+import CreateCard.CreateIdCardOld;
 import adapter.EmployeeCard;
 import adapter.IdCardToEmployeeAdapter;
 import adapter.OutApi.IdCardApi;
@@ -5,6 +7,7 @@ import adapter.OutApi.IdCardInfo;
 import adapter.OutApi.PassportApi;
 import adapter.OutApi.PassportInfo;
 import adapter.PassportToEmployeeAdapter;
+import templatemethod.CreateCardTemplate;
 import templatemethod.CreateEmployeeCard;
 import templatemethod.CreateIdCard;
 
@@ -20,9 +23,9 @@ public class Main {
 
     public static void main(String[] args) {
         Main main = new Main();
-        main.showPersonInfo();
+//        main.showPersonInfo();
 //        main.showAdapter();
-
+        main.showPersonInfoOld();
     }
 
 //    public static void showRedDuck(){
@@ -41,10 +44,20 @@ public class Main {
 
     public void showPersonInfo(){
         System.out.println("--------------------------------------------------------------");
-        CreateIdCard info = new CreateIdCard();
+        CreateCardTemplate info = new CreateIdCard();
         info.makeCard();
         System.out.println("--------------------------------------------------------------");
-        CreateEmployeeCard info2 = new CreateEmployeeCard();
+        CreateCardTemplate info2 = new CreateEmployeeCard();
+        info2.makeCard();
+        System.out.println("--------------------------------------------------------------");
+    }
+
+    public void showPersonInfoOld(){
+        System.out.println("--------------------------------------------------------------");
+        CreateIdCardOld info = new CreateIdCardOld();
+        info.makeCard();
+        System.out.println("--------------------------------------------------------------");
+        CreateEmployeeCardOld info2 = new CreateEmployeeCardOld();
         info2.makeCard();
         System.out.println("--------------------------------------------------------------");
     }
