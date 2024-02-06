@@ -17,8 +17,9 @@ public class CreateEmployeeCard extends CreateCardTemplate{
     @Override
     public void printCard() {
         System.out.println("""
-                5. Print Driver License
-                Name: สมชาย ใจดี
+                5. Print Employee Card
+                Name: สมชาย
+                SurName: ใจดี
                 ID:""" + random);
     }
 
